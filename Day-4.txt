@@ -1,0 +1,32 @@
+Angular starting point = main.ts--> app.module.ts-->@ngmodule-->Bootstrap [root component]
+-selector reference in HTML
+-and add in decleration at @ngmodule
+
+-------------------------------------------------
+
+Data binding:
+
+-communication between Ts to HTML or CSS --OR-- vicevarsa
+
+1.String interpolation:[one way data binding] [Ts to html]
+	Ts file==> name = "Kapil";
+	HTML File==> My name is {{name}};
+
+ B. Method calling:
+	Ts file==> name(){ return this.name};
+	HTML File==> My name is {{name()}};
+
+2. property binding:[one way data binding] [Ts to html]
+	Ts file==> allowserver =false;
+	HTML File==> <button [disabled]="allowserver"> add server <button>
+
+3. Event binding: 
+	-to control actions ex.onclick
+	-[one way data binding] [HTML to TS]
+	-(click) = "data"
+
+Two Way data Binding:
+
+[(ngModel)]="data"; //combination of property and event binding
+
+banana in box = [()]

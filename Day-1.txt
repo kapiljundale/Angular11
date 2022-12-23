@@ -1,0 +1,72 @@
+Angular:[UI FRAM-WORK]
+
+-Angular is a typescript-based open-source framework for 
+building client side web application.
+-By using Angular we can make single page Application.
+
+Advantages:
+	-DOM Managment
+	-Restful API
+	-Animation Support
+	-form validation
+	-Two way data binding.
+	-SPA
+	-Ajax/JSONP-asynchronous- API Call.....[synchronous-api call sequentialy]
+
+DisAdvantage:
+	-Angular has not inbuilt SOE: search optimization not possible in angular
+
+
+Difference between angularjs and angular
+Angularjs: 
+	-JavaScript.
+	-MVC-model view control-aricture.
+	-OOPs not supported.
+	-Not a Two way data binding
+
+Angular 2,4,5,6,7,8...14: 
+	-TypeScript.
+	-component or services controller.
+	-OOPs Supported.
+	-Two way data binding
+
+client Side Validation-UI validation
+Server side Validation- backend/server validation
+
+official website-AngularJs-[Angular-1x]-www.angularjs.org
+		-Angular2..14-www.angular.io
+
+Features:
+	-ES6 Support
+	-Speed more	
+	-module
+	-Responsive website
+
+*****to update older version to new use website-www.update.angular.io
+
+Angular installation:
+	-npm install -g @angular/cli@8.1.0
+	-ng version
+	-creat folder	[---inside direct write cmd]
+	-cd path of folder
+	-creat new project- Go to cmd
+			 -ng new angularapp
+			 - Do you want rounting-YES
+			 - select default CSS..[might show error]
+			 - open folder in VS Code
+			 - go to package.json
+			 - delete all data
+			 - download file package.json [sir provided]
+			 - downloaded file copy all data and past in vs code
+			 - open terminal and install dev dependances [check path correct]
+			 - npm i
+			 -after installation write** ng serve ---convert all ts to js file
+			 - open browser click [ localhost:4200 ]
+
+
+
+
+
+
+
+

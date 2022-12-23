@@ -1,0 +1,21 @@
+Reactive Form--->[part3]
+
+ngmodelgroup: for nested formgroup
+
+
+<small *ngIf="myReactiveForm.get('userDetails.username').errors['namesNotAllowed']">User name not allowed {{myReactiveForm.get('userDetails.username').value}}</small>
+
+
+NaEmails(control:FormControl): Promise<any> | Observable<any> {
+    const myResponse = new Promise<any>((resolve, reject) => {
+      setTimeout(() => {
+        if(control.value === 'codemindtechnology@gmail.com'){
+          resolve({'emailNotAllowed': true})
+        } else {
+          resolve(null)
+        }
+      }, 3000);
+    })
+    return myResponse;
+  }
+

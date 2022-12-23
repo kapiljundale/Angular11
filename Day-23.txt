@@ -1,0 +1,22 @@
+
+Angular Pipes:
+
+	-pipes are refered as filters.It helps to transfer the data from one format to another
+	-syntx: {{ | }}
+	-array, integers, string as input
+
+EX- {{todaysDate | date:'M/dd/yyyy'}}
+
+
+Chained Pipes:- We combine multiple pipes
+	      - EX-Todays Date: {{todaysDate | date:'fullDate' | lowercase}}
+
+Asychronus pipe:- data comes in observable without using subscribe
+
+Currency Pipe:-code is used to represent different currency
+	Ex.-{{price | currency:'INR'}}
+
+Custom Pipe: 
+	-creat by custom with following command ng g p pipeName.
+	-once creat a pipe with decorator @pipe and there is name property.
+	-pipe uses one interface i.e Transform and implements pipetrnsform.

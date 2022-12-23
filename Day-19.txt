@@ -1,0 +1,15 @@
+Reactive Form [Part-3]
+-----------------------------------------------------------------
+To show data on html side
+-----------------------------------------------------------------
+formArray:
+It is allow us to add control dynamically to the reactive form.
+-----------------------------------------------------------------
+formArrayName:
+-----------------------------------------------------------------
+Azure: cloud platform :Microsoft:
+AWS: cloud platform: Amazon
+	-Centerlize data center
+	-storage
+	-Security
+

@@ -1,0 +1,45 @@
+Depedency Injection:
+	-It consist of Injectable in service and provide in app module in provider
+
+---------------------------------------------------------------------------
+Http and Observables:
+
+http: 
+	-It is used for reading or featching data from server.
+	-By using http we are featching data from webserver.
+
+Observable:
+	-It will modify the data from server
+	-and send the data to the subscribed component
+-------------------------------------------------------------
+what is difference between promise and observable
+
+Observable			promise
+
+
+
+-------------------------------------------------------------
+fack API-https://jsonplaceholder.typicode.com/
+
+-----------------------------------------------------------
+1. apiURL = 'https://jsonplaceholder.typicode.com/users';
+
+2. constructor(private http: HttpClient)
+
+3. getUsersData()
+  {
+   return this.http.get(this.apiURL);
+  }
+
+4. constructor(private _demoService: DemoService)
+
+5. ngOnInit(): void {
+    this._demoService.getUsersData().subscribe(data => {
+      console.log('getting data from api', data)
+    })
+  }
+
+6. import { HttpClientModule} from '@angular/common/http';
+
+7. HttpClientModule
+

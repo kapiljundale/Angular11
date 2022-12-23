@@ -1,0 +1,49 @@
+Installation of bootstrap:
+1. npm install bootstrap --save
+
+2. npm install jquery --save
+
+3. npm install popper.js --save
+
+4. go to Angula.Json file
+
+5. style:
+"node_modules/bootstrap/dist/css/bootstrap.min.css",
+
+6. Script:
+"node_modules/jquery/dist/jquery.min.js",
+"node_modules/bootstrap/dist/js/bootstrap.min.js"
+
+Bootstrap: it is libraray used for responsive
+	website: https://getbootstrap.com/docs/4.0/content/tables/
+
+Angular Material: also used for responsive
+
+------------------------------------------------
+creat new component with limited file: ng g c ngswitch --spec=false
+------------------------------------------------
+
+Directives:
+The angular directive are used to mainpulate the dom by using angular directive we can change
+the apperance behaviour or layout the dom element.
+
+ex- div-modify and apperance behaviour
+
+we have 3 types of directive:
+1. Structural directive
+2. Attribute directive
+3. component directive
+4. custom directive
+
+1.Structural directive:
+	-directive start with * . 
+	-this directive used for manipulate/modify.
+
+	-*ngIf-the ng/If allow us to add/remove the dom element.
+	      - we can show or hide the element based on condition.
+		Ex.-<div *ngIf=""></div>
+
+	-*ngFor-Repeat the portion of html element.
+	        -Ex. creat folder models--file in movie.ts--demodirective.ts--demodirective.html
+	
+	-*ngSwitch-Add or remove html element by using condition

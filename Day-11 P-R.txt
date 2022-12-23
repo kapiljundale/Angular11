@@ -1,0 +1,35 @@
+Hooks of component:[NEXT PART-2]
+
+	-what is content projection.
+	-if html written in selector, of parent then pass to the child
+
+5.ngAfterContentInit:
+	-It is used after Content projection view
+	- <ng-content></ng-content>--it is written in html child.
+	-ngAftercontent it is used to chnage the data or apply operation in content projection
+
+6.ngAfterContectChecked:
+	-every change to handle data we can use ngAfterContectChecked
+
+7.ngAfterViewInit:
+	-this life cycle hook will call after the component view (and child views) has been intilized.
+	-It is called at only once.
+
+8.ngAfterViewChecked:
+	-every change to handle 
+
+app.html
+<h1 #child>This is child content coming from parent component</h1>
+
+<app-hooks [userid]="uid" [parentData]="data" [product]="product">
+  <h1 #child>This is child content coming from parent component</h1> 
+ </app-hooks>
+
+
+child.ts
+data : string = 'red';
+
+
+
+
+

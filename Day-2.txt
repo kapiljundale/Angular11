@@ -1,0 +1,34 @@
+package.json: helpful for download packages/dependances
+package-lock.json: log the which package are installed
+
+------------------------------------------------------------
+
+AngularAPP- Project Name
+e2e- It is nothing but end to end testing Ex.-test.spec.ts
+node_modules- download dependance not need to push the code
+src- all code inside the src
+	App---app-routing.module.ts
+	     - angular prepare defualt component i.e. app
+	Assest--responsible for store images, raw data etc
+	environment--used for different environment dev,test, production etc
+	favicon.ico--website icon
+	index.html-- SPA this page rander only one by server
+	main.ts-- compiler start from execuation from that file
+	polyfills.ts-- It will support the browser to run older--compatiable to browser
+	style.css-- to apply globaly css we  have to use
+	test.ts-- main file for testing
+	angular.json-- all configration written in this file--third party library we have to write in style and scripts part 
+	karma.conf.json- it is usful for testing.
+	tsconfig.json-- ts file compiler for configration
+	tslint.json-- inforce coding standared written in this file.
+
+----------------------------------------------------------------------
+
+Angular is use Just In Time compiler
+
+<app-root>[it is not part of DOM]--->> Main.ts---->bootstrapmodule-[call the app module]-->> app.module.ts--
+---@NgModel[decorator-provide meta data]--bootstrap:AppComponent[defaultComponent]--->>app.component.ts--@component[decorator]--selector:App root
+
+
+
+

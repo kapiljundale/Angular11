@@ -1,0 +1,85 @@
+Attribute directive:
+--------------------
+we can change behaviour or looks of the dom element
+------------------------------------------------------------------
+ngStyle:
+	-It is used for for setting the style attribute of dom element
+	-we can set more than one property
+syntax:
+<div [ngStyle]="{'color': colorVal,'background-color':'blue'}">
+    attridirective works!
+</div> 
+
+------------------------------------------------------------------
+ngClass:
+	-It is used for for setting the style attribute on class
+ EX::
+
+html file:
+<h4>Ng Class</h4>
+
+<ul *ngFor="let person of people">
+    <li [ngClass]="{
+        'text-success': person.country === 'UK',
+        'text-primary': person.country === 'USA',
+        'text-danger': person.country === 'HK'
+    }">
+ 
+     {{person.name}} ({{person.country}})
+    </li>
+</ul>
+
+TS file:
+people:any[] = [
+    {
+      "name": "Jack",
+      "country": "UK"
+    },
+    {
+      "name": "Sumit",
+      "country": "USA"
+    },
+    {
+      "name": "Anup",
+      "country": "HK"
+    },
+    {
+      "name": "coidemind",
+      "country": "UK"
+    },
+    {
+      "name": "Surya",
+      "country": "USA"
+    }
+  ]
+-----------------------------------------------------------
+
+Custom directive:
+	-to creat new custon directive:ng g d test.
+	-directive does not have templetURL and styleURL
+	-
+ex: creat new directive 
+
+html file:
+<p appCustdirective> Applied Custom directive para</p>
+
+TS file:
+import { Directive, ElementRef, Renderer2 } from '@angular/core';
+
+@Directive({
+  selector: '[appCustdirective]'
+})
+export class CustdirectiveDirective {
+
+  constructor(private el: ElementRef, private render: Renderer2) {
+    console.log('custom directive applied');
+
+    //el.nativeElement.style.backgroundColor = 'gray';
+    //el.nativeElement.style.display = 'none';
+    render.setStyle(el.nativeElement, 'backgroundColor', 'yellow');
+   }
+
+
+}
+
+

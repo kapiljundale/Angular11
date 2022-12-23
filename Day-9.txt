@@ -1,0 +1,25 @@
+component:-->lifecycle hooks---It having different phases---ex..student--Education-job-family
+------------------------------------------------------------------------
+Authentication: verify the identity of user---ICard
+
+Authorization: check the access of right---permission for department
+
+io operation: it connecting between the OS and file 
+
+---------------------------------------------------------------------
+
+Hooks of component:
+
+1.Constructor:
+	-this is invoked when angular creats a component by calling new of the class
+	-it is used for intilization of property, dependancy injection, inheritance[super() used to pass value from child class to parent]
+	- this is first method which is called by hooks
+
+2.ngOnChanges:
+	-this is invoked every time there is change in one of the input property of the component.
+	-@input used in ngOnChange.
+	-this is the only one lifecycle hooks which will come with parameter i.e SimpleChange.
+
+3.ngOnInit:
+	-after completion of dom element execuation then it will call ngOnInit 
+	

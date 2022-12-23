@@ -1,0 +1,20 @@
+Reactive Form: 
+	-It is more Robust.
+	-It is more Scalable
+	-We are using ReactiveModule/ Templete drive we us Form Module
+	-We are creating reactive form using typescript.
+	-Form group-->It is collection of form controls/FormArrys.
+-------------------------------------------------------------------------
+ng--->Angular
+-------------------------------------------------------------------------
+-same name component can not be created in Angular. It will show semantic error.
+------------------------------------------------------------------------------------
+JIT-Compiler used to run [J-just,I-in,T-time]
+TSC to JS-TS Compiler is used
+-------------------------------------------------------------------------------
+polyfill.js is used to run with different browser OR Compitablity use
+-----------------------------------------------------------------------------
+
+1.creat reactive form
+2.validation 
+3.

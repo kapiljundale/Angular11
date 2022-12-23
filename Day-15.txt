@@ -1,0 +1,26 @@
+ANgular Form:
+
+Radio Button: Used to select any one of option
+
+HTML:
+   <div class="form-group">
+   <div *ngFor ="let gender of genders " class="custom-control custom-radio">
+   <input type="radio" id="{{gender.id}}" name="gender" value="{{gender.value}}" [ngModel]="defaultValue"  class="custom-control-input">
+   <label for="{{gender.id}}" class="custom-control-label">{{gender.value}}</label>
+   </div>
+   </div>
+
+TS:
+ defaultValue:string = "Male";
+  genders =[
+    {id:"1", value:"Male"},
+    {id:"2", value:"Female"}
+  ]
+
+
+Date:
+
+HTML:
+<div class="form-group">
+ <input type="date">
+ </div>

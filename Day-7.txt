@@ -1,0 +1,52 @@
+https://docs.google.com/spreadsheets/d/1fcelmtZaLQRXxQ8mkrl3hLmtFNd2RGlX-pmMSkXphOk/edit#gid=0
+--------------------------------------------
+Dynamic 365 - finance and operations 
+---------------------------------------------
+last part ---component, module, databinding, directives
+--------------------------------------------
+Data transfer from html to Ts and Ts to Html without using two way data binding
+
+#username= template referance variable.
+
+HTML file:
+<div>
+    <input type="text" #username>
+</div>
+<div>
+    <button (click)="show(username.value)">show</button>
+</div>
+<div>
+    {{uname}}
+</div>
+
+TS file:
+uname;
+
+show(value){
+  this.uname = value;
+ }
+
+-------------------------------------------------------------
+
+once we have requirment to pass data from one comp. to another then
+we are using @input decorator and @output decorator/property.
+
+-If there is relationship between two component i.e parent and child 
+	Ex- App comp. calling all other comp. by using selector 
+		App comp.-Parent
+		other comp-Child.
+
+*********************
+-@input()- this will pass the data from parent to child component.
+	Ex.Parent-----To-----Child
+		1. creat variable in parant compt. TS File
+		2. in paraent compt. pass variable in child selector using property binding IN HTML FILE.
+		3. in child TS FILE call variable by using @input variableName:string
+		4. In child TS File in NgOnint method call that variable.
+
+*********************
+-@output()- +EventEmitter this will pass the data from child to parent compt.
+	Ex. Child----To-------Parent
+-----------------------------------------------------
+NEXT DAY
+

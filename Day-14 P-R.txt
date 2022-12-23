@@ -1,0 +1,36 @@
+Angular Form:
+
+-two way databinding is possible in templete driven form and not possible in reactive form
+
+Templete Driven Form:
+-Created form
+-Default Value
+-TwoWayData Binding
+-Validation
+-Get Value
+-Form Group
+-Get Exact Value
+
+export class Employee 
+{
+    coursees: string;
+    username: string;
+    email: string;
+}
+
+
+OnSubmit(form:NgForm) {
+    this.submitted = true;
+    this.employee .coursees = form.value.course;
+    this.employee .username = form.value.userDetails.username;
+    this.employee .email = form.value.userDetails.email;
+
+   this.saveEmployeeData(this.employee);
+  }
+
+  saveEmployeeData(emp:Employee) {
+   console.log(emp.coursees);
+  }
+
+employee = new Employee();
+  submitted: boolean = false;

@@ -1,0 +1,38 @@
+JIT compiler- local development
+AOT compiler- Production development
+
+----------------------------------------------------
+
+main building block in angular
+
+1.Modules:
+2.Componenent
+3.Templets(View HTML)
+4.Metadata
+5.DataBinding
+6.Directivies
+7.services
+8.Dependancy Injection
+
+Components:
+it is decorator to provide metadata
+
+1. Method 1 :: Manual creation of component:
+	-creat folder in side the app folder
+	-prepare component ts file ex.demo.component.ts
+	-inside ts file
+	  -@component({
+		selector: 'app-demo',
+		template: '<h1> This is my server component'
+		styleUrls:['./demo.component.css']
+
+	   })
+	  -export class democomponent{
+	   }
+	-creat css file ex.demo.component.css
+	-add file in html by using tag ex. <app-server>
+	-@ngModel add decorator add component name ex. democomponent
+	-it show error then import file by using [ctrl+.] use for import
+
+2. Method 2:: creation component by using CLI
+	- ng g c add
