@@ -1,0 +1,20 @@
+<!-- <p>{{employeeName}}</p> -->
+
+<!-- @input Assignment -->
+<table class="table">
+    <thead>
+        <th> empName </th>
+        <th> empCity</th>
+        <th> empSalary</th>
+    </thead>   
+    <tbody >
+        <tr *ngFor = "let employee of employeedata">
+            <td>{{employee.empName}}</td>
+            <td>{{employee.empCity}}</td>
+            <td>{{employee.empSalary}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- @output Assignment -->
+<button (click)="onClickButton()">Submit</button>

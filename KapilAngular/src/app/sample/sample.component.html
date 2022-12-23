@@ -1,0 +1,32 @@
+<p>sample works!</p>
+<div>
+<input type="text" [(ngModel)]="inputTxt"> &nbsp; &nbsp;
+  <button class="btn btn-primary" (click)="addToList()"> Add </button>
+</div>
+<ul>
+
+  <!-- <li *ngFor="let item of listArr; let i = index" >
+    <label>{{item}}</label> <button (click)="removeItem(i)">remove</button>
+       
+  </li>
+</ul> -->
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Name of fruit</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let item of listArr; let i = index">
+    <tr>
+      <td>{{i+1}}</td>
+      <td>{{item}}</td>
+      <td><button class="btn btn-danger" (click)="removeItem(i)">remove</button></td>
+    </tr>
+  </tbody>
+</table>
+
+
+    

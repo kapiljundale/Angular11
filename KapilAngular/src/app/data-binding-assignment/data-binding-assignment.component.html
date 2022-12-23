@@ -1,0 +1,8 @@
+<h3>Two way data Binding Assignment</h3>
+<div>
+    Enter User Name: <input type="text" [(ngModel)]="UserName">
+</div> 
+<p>
+    User_Name : {{UserName}}
+<p>
+  <button (click) = "onClickUserName()">Reset</button>

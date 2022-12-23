@@ -1,0 +1,34 @@
+<h4>***Ng Style***</h4>
+
+<div [ngStyle]="{'color': colorVal,'background-color':'blue'}">
+    attridirective works!
+</div> 
+
+<br>
+<br>
+
+<h4>***Ng Class***</h4>
+
+<ul *ngFor="let person of people">
+    <li [ngClass]="{
+        'text-success': person.country === 'UK',
+        'text-primary': person.country === 'USA',
+        'text-danger': person.country === 'HK'
+    }">
+ 
+     {{person.name}} ({{person.country}})
+    </li>
+</ul>
+
+<p>Custom directive para</p>
+
+<p appCustdirective> Applied Custom directive para</p>
+<div>
+    <input type="text" #username>
+</div>
+<div>
+    <button (click)="show(username.value)">show</button>
+</div>
+<div>
+    {{uname}}
+</div>
