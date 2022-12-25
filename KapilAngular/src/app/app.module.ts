@@ -26,6 +26,10 @@ import { FilterpipeComponent } from './filterpipe/filterpipe.component';
 import { FilterPipe } from './filter.pipe';
 import { PipeAssignmentComponent } from './pipe-assignment/pipe-assignment.component';
 import { PipeassPipe } from './pipeass.pipe';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactComponent } from './contact/contact.component';
+import { ProductComponent } from './product/product.component';
+import { HomeComponent } from './home/home.component';
 //import { Servicecomp1Component } from './servicecomp1/servicecomp1.component';
 //import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
 //import { Http}
@@ -56,6 +60,10 @@ import { PipeassPipe } from './pipeass.pipe';
     FilterPipe,
     PipeAssignmentComponent,
     PipeassPipe,
+    AboutUsComponent,
+    ContactComponent,
+    ProductComponent,
+    HomeComponent,
    // Servicecomp1Component,
     //Servicecomp2Component,
     

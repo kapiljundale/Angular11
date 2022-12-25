@@ -1,0 +1,40 @@
+types of decorator-Decorator provide instruction to JS
+---------------------------------
+@NgModule()
+@component()
+@Directive()
+@Input()
+@Output()
+@Injectable()
+@Pipe()
+---------------------------------
+
+Routing: 
+-Navigation between the pages.
+-RouterModule
+-default module creat while generating project
+-ForRoot is Static method
+
+-three STeps:
+1.Configure the routes:route is the mapping our to a component.
+Ex.const routes: Routes = [
+  {path:'aboutUs', component:AboutUsComponent},
+  {path:'contact',component:ContactComponent},
+  {path:'product',component:ProductComponent}
+];
+
+2.Add a router outlet: to render the routes components.
+Ex. <router-outlet></router-outlet>
+
+3.Add router link
+	href-If we use href then reload page every time. 	
+	routerlink: it does not reload the page.
+	[routerLinkActiveOptions]="{exact:true}"-Used to show exact value 
+	routerLinkActive-to check currect route is active or not
+
+
+Route Redirection: to go in default page
+	ex-{path:'',redirectTo:'login',pathMatch:'full'},
+	   {path:'login',component:LoginComponent},
+
+-index file add  <base href="/"> to configure the routing
