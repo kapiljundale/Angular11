@@ -1,0 +1,16 @@
+dependancy injection: used constructor based we di
+
+Moudles:
+	-it can optimize our application and improve performance as well.
+	-by using module we can better restructure our code.
+	-we can maintain our angular application easily.
+
+To creat module: ng g m moduleName --flat [flat is used remove folder of module]
+
+feature module	- we can split main module with sub modules
+		-feature module must be imported first in app.module.ts---IMP
+
+Component required for 2 module: we can resolve dulication using shared module
+
+
+

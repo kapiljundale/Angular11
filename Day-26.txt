@@ -1,0 +1,13 @@
+Routing-[part-2]
+
+**---used wild card route-----If page not avilable then ----This should be created at last only
+
+Nested and Child routes:
+	-creat a component inside the parent component.
+	-multiple router-outlet we can use.
+
+navigating routes programing:
+	
+
+----------------------------------------------------------------
+component and directive-directive does not have templete url

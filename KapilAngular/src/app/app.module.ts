@@ -28,8 +28,14 @@ import { PipeAssignmentComponent } from './pipe-assignment/pipe-assignment.compo
 import { PipeassPipe } from './pipeass.pipe';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
-import { ProductComponent } from './product/product.component';
+//import { ProductComponent } from './product/product.component';
 import { HomeComponent } from './home/home.component';
+import { PagenotFoundComponent } from './pagenot-found/pagenot-found.component';
+import { LoginComponent } from './login/login.component';
+import { DemopostComponent } from './demopost/demopost.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PostDetailsComponent } from './post-details/post-details.component';
+import { ProductsModule } from './product/products.module';
 //import { Servicecomp1Component } from './servicecomp1/servicecomp1.component';
 //import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
 //import { Http}
@@ -44,7 +50,7 @@ import { HomeComponent } from './home/home.component';
     DataBindingAssignmentComponent,
     DemodirectiveComponent,
     AttridirectiveComponent,
-    CustdirectiveDirective,
+    //CustdirectiveDirective,
     InputOutputAssignmentComponent,
     UseInputOutputComponent,
     HooksComponent,
@@ -62,18 +68,24 @@ import { HomeComponent } from './home/home.component';
     PipeassPipe,
     AboutUsComponent,
     ContactComponent,
-    ProductComponent,
+    //ProductComponent,
     HomeComponent,
+    PagenotFoundComponent,
+    LoginComponent,
+    DemopostComponent,
+    PostDetailsComponent,
    // Servicecomp1Component,
     //Servicecomp2Component,
     
         ],
   imports: [
+    ProductsModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    //httpClientModule,
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
