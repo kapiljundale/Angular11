@@ -11,7 +11,7 @@ import { CustdirectiveDirective } from '../custdirective.directive';
 
 
 const prodRoutes: Routes =[
-  {path:'product',component:ProductComponent,children:[
+  {path:'',component:ProductComponent,children:[
     {path:'laptop',component:LaptopComponent},
     {path:'mobile',component:MobileComponent},
     {path:'tv',component:TvComponent},
@@ -37,4 +37,8 @@ const prodRoutes: Routes =[
     RouterModule
   ]
 })
-export class ProductsModule { }
+export class ProductsModule { 
+  constructor(){
+    console.log('Products Module Works');
+ }
+}

@@ -1,0 +1,83 @@
+CanActive: It will check weather user authenticated or not.
+CanDeactivate: 
+
+---------------------------------------------------------------
+
+Angular CRUD:
+
+C-Creat, Post
+R-Read, Get
+U- Update, PUT, PATCH
+D-Delete, DELETE
+
+HttpClientModule----httpClient----service---
+
+-Every request gives-data in observable
+-rapaid api-website for fake api
+
+chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security
+
+https://rapidapi.com/apidojo/api/bb-finance/
+--------------------------------------------------------------
+
+Steps for Delete in CRUD::
+--------------------------
+1.creat service 
+2. Creat Method
+deletePostByID(id){
+  return this._httpClient.delete(`${devAPIUrl}posts/` + id);
+}
+3.Inject the service in component of ts file in constructor
+constructor(private _postService:PostService){}
+4.in HTML Creat one button and apply click event on it.
+5.creat method on ts file for delete button.
+DeletePost(){
+  this._postService.deletePostByID(1).subscribe(res=>{
+    console.log(res);
+    
+  })
+}
+------------------------------------------------------------------
+
+Steps for GET in CRUD::[Using Rapid API]
+----------------------------------------
+
+1. go to rapid api website
+2.creat account select any one api
+3.creat one service with apiName
+4.creat on service with api Name and inject the httpClient in the service
+5. and creat one method on it
+  url="https://bb-finance.p.rapidapi.com/market/auto-complete";
+
+  constructor(private _httpClient:HttpClient) { }
+
+  getDataBBFinance(){
+    return this._httpClient.get(this.url);
+  }
+6.creat one component with api name and add selector of component in app.html
+7.in rapid api component inject service in constructor.
+8.Subscribe the data on ngOnInit
+ ngOnInit() {
+    this.rapidApiService.getDataBBFinance().subscribe(res=>{
+      console.log('rapid finance data',res);
+    })
+  }
+9.CROSS ORIGEN- front end and back end deployed on different server
+10.open chrome in developer mode --open run---type data--chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security
+11.creat headers in service for autherization.
+12. and pass headers in get method
+ getDataBBFinance(){
+    let headers = new HttpHeaders({
+      'X-RapidAPI-Host': 'bb-finance.p.rapidapi.com',
+      'X-RapidAPI-Key': 'd5d8cf7f01mshfaad59cb0dcdbdfp1b4902jsn45234b2a462d'
+    })
+    return this._httpClient.get(this.url,{headers: headers});
+  }
+13.add parameter in url service
+https://bb-finance.p.rapidapi.com/market/auto-complete?query=mango
+
+
+
+
+
+

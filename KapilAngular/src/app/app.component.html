@@ -113,7 +113,14 @@
         <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLink="contact/"> Contact Us</a></li>
         <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLink="pipe/"> Search</a></li>
         <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLink="post/"> Post</a></li>
+        <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLink="codemind/"> CodeMind Technology</a></li>
+        <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLink="orders/"> Orders</a></li>
       </ul>
       </nav>
+      <div>
+        <button style="padding: 10px 10px 10px;" class="btn btn-danger"  (click)="DeletePost()" >Delete Post</button>
+      </div>
 </header>
+<app-rapid-api></app-rapid-api>
 <router-outlet></router-outlet>
+

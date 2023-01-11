@@ -36,6 +36,11 @@ import { DemopostComponent } from './demopost/demopost.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostDetailsComponent } from './post-details/post-details.component';
 import { ProductsModule } from './product/products.module';
+import { CodeModule } from './codemind/code.module';
+import { OrdersModule } from './orders/orders.module';
+import { AdduserComponent } from './adduser/adduser.component';
+import { FirebaseComponent } from './firebase/firebase.component';
+import { RapidApiComponent } from './rapid-api/rapid-api.component';
 //import { Servicecomp1Component } from './servicecomp1/servicecomp1.component';
 //import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
 //import { Http}
@@ -74,13 +79,18 @@ import { ProductsModule } from './product/products.module';
     LoginComponent,
     DemopostComponent,
     PostDetailsComponent,
-   // Servicecomp1Component,
+    AdduserComponent,
+    FirebaseComponent,
+    RapidApiComponent,
+     // Servicecomp1Component,
     //Servicecomp2Component,
     
         ],
   imports: [
-    ProductsModule,
+    //ProductsModule, removed due to lazy loading
     BrowserModule,
+    CodeModule,
+    //OrdersModule, removed due to lazy loading
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
@@ -90,4 +100,8 @@ import { ProductsModule } from './product/products.module';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {  
+  constructor(){
+  console.log('App Module Called');
+}
+}

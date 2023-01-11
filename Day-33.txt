@@ -1,0 +1,10 @@
+Angular CRUD:
+
+RxJS: 
+	-website:https://rxjs.dev/guide/observer
+	-It is library used to convert data to observable.
+	-pipe is method of obserable combine multiple operators.
+	-map() operator manipulate the data before subscribe.
+	-Search on google --RxJs Marbles---------All operators used manipulate the data before subscribe.
+
+

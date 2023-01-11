@@ -1,0 +1,20 @@
+Module Loading Startegy:
+-----------------------
+1. Eggar Loading --> all module are downloaded in user system when start application.
+------------------------------------------------------------------------
+2. Lazy Loading --> we loaded module on demand.
+		-- If application is complex then we can go for it.
+EX-App-Routing-module.ts
+	const routes: Routes = [
+  {path:'orders',loadChildren:'./orders/orders.module#OrdersModule'},
+  {path:'product',loadChildren:'./product/products.module#ProductsModule'},
+  ];
+---------------------------------------------------------------------------
+3. Pre Loading --> It will load the module background
+	       --> you can implement preloading strategy if you have implemented lazy loading.
+EX-App-Routing-module.ts
+@NgModule({
+  imports: [RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})],
+  exports: [RouterModule]
+})
+---------------------------------------------------------------------------

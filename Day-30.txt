@@ -1,0 +1,28 @@
+Improve application performance by using lazy loading, ngOnDestory, preLoading
+----------------------------------------------------
+1. configure the route.
+	const routes:Routes = []
+	RouterModule.forRoot(ROUTES);
+2. Add router outlet.
+3. routerLink
+
+Split The module
+
+on demand module has been load.---Lazy Loading
+
+1. order directive
+2. service directive....share module.
+
+----------------------------------------------------
+Authentication:
+	-It will provide the security to your route path. gaurd.
+	-protect application we use AuthGard--> guarding routes or provide security.
+	-to generate Authgard we use CLI Command-ng g g gardname
+	- router protected by using CanActivate, canDeactive, CanLoad, CanActiveChild, Resolve
+
+
+
+run application-->ng s -o
+
+
+

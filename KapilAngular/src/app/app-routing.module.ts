@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { AuthGuard } from './auth.guard';
 import { ContactComponent } from './contact/contact.component';
 import { demoComponent } from './demo/demo.component';
 import { DemopostComponent } from './demopost/demopost.component';
@@ -26,11 +27,17 @@ const routes: Routes = [
   {path:'post',component:DemopostComponent},
   {path:'postDetails/:id',component:PostDetailsComponent},
   {path:'pipe',component:PipeAssignmentComponent},
+  {path:'orders',loadChildren:'./orders/orders.module#OrdersModule'},
+  {path:'product',canActivate:[AuthGuard],  loadChildren:'./product/products.module#ProductsModule'},
   {path:'**',component:PagenotFoundComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  constructor(){
+    console.log('App Routing Module Works');
+ }
+}

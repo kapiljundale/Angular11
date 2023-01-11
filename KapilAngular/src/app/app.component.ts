@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Product } from './models/product';
+import { PostService } from './Services/post.service';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,15 @@ export class AppComponent {
   title = 'angular By Kapil';
   uname = "I am from parent component";
   
+constructor(private _postService:PostService){}
+
+DeletePost(){
+  this._postService.deletePostByID(1).subscribe(res=>{
+    console.log(res);
+    
+  })
+}
+
   //@output decorator
   // foods: string[] = [];
 
